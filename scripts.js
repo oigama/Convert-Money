@@ -31,7 +31,10 @@ const convertValues = () => {
 
   if (select.value === '₿ Bitcoin') {
     dolarValueText.innerHTML = new Intl.NumberFormat("BTC", {
+      style: "currency",
       currency: "btc",
+      minimumFractionDigits: 8,
+      maximumFractionDigits: 8,
     }).format(inputReais / bitcoin)
 
   }
